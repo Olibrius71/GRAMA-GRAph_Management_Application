@@ -1,0 +1,8 @@
+rootProject.name = "javafx_essai1"
+
+buildCache {
+    local {
+        directory = new File(rootDir, 'build-cache')
+        removeUnusedEntriesAfterDays = 30
+    }
+}

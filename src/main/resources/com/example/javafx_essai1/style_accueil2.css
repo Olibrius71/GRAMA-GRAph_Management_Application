@@ -1,0 +1,30 @@
+.root {
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, reflect, #000000 0.0%, #ff2400 19.2463%, #000000 48.0488%, #000000 97.4195%, #000000 100.0%);
+}
+
+#quitButtonInAccueil {
+    -fx-background-color: linear-gradient(to bottom left, cyan, green);
+    -fx-font-size: 22;
+}
+
+#titreAccueil {
+    -fx-text-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0046ff 0.0%, #00a1ff 58.6341%, #0021ff 90.8089%, #0021ff 100.0%);
+    -fx-font-size: 120;
+}
+
+.choiceButton {
+    -fx-font-size: 45;
+    -fx-background-color: linear-gradient(from 10.6061% 0.0% to 100.0% 100.0%, reflect, #000000 0.0%, #000000 1.4805%, #ff0000 29.7725%, #000000 54.1135%, #00ffbb 77.7658%, #000000 86.8102%, #000000 100.0%);
+}
+
+.descChoiceButton {
+    -fx-font-size: 18;
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(from 0.0% 100.0% to 0.0% 0.0%, reflect, #717171 0.0%, #1e1e1e 18.8425%, #707070 45.3659%, #1e1e1e 100.0%);
+}
+
+.buttonBackgroundPane {
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0046ff 0.0%, #00a1ff 58.6341%, #0021ff 90.8089%, #0021ff 100.0%);
+}
+
+

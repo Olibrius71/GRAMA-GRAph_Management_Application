@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXFilterComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXRadioButton?>
+<?import io.github.palexdev.materialfx.controls.MFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="864.0" prefWidth="1536.0" stylesheets="@style_comparaison.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_essai1.PageComparaisonController">
+   <children>
+      <MFXButton fx:id="quitButton" alignment="CENTER" buttonType="RAISED" depthLevel="LEVEL5" layoutX="32.0" layoutY="24.0" onAction="#closeApp" prefHeight="54.0" prefWidth="134.0" rippleColor="RED" text="QUITTER" textOverrun="CLIP">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </MFXButton>
+      <MFXButton fx:id="backButton" alignment="CENTER" buttonType="RAISED" layoutX="197.0" layoutY="28.0" onAction="#closeFunctionnality" prefHeight="13.0" prefWidth="134.0" text="RETOUR" textOverrun="CLIP">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <rippleColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.3846436660867282">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.6403538719101863">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.8088829071332437">
+                     <color>
+                        <Color red="0.9894737005233765" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.910097495322194">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </rippleColor>
+      </MFXButton>
+      <SplitPane fx:id="splitPane" dividerPositions="0.41, 0.59" layoutY="114.0" prefHeight="750.0" prefWidth="1536.0">
+        <items>
+          <AnchorPane fx:id="splitPaneLeft" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="splitPanePart" SplitPane.resizableWithParent="false">
+               <children>
+                  <MFXFilterComboBox fx:id="mfxFilterComboBox_left" layoutX="241.0" layoutY="357.0" onMouseClicked="#getEndroit" prefHeight="58.0" prefWidth="249.0">
+                     <tooltip>
+                        <Tooltip fx:id="tooltipFilterComboBox_left" styleClass="tooltips" text="Sélectionner une ville">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </MFXFilterComboBox>
+                  <MFXComboBox fx:id="mfxComboBox_left" allowEdit="true" borderGap="50.0" floatingText="Endroit" floatingTextGap="8.0" layoutX="192.0" layoutY="125.0" measureUnitGap="8.0" onMouseClicked="#getEndroit2" prefHeight="70.0" prefWidth="346.0" promptText="Endroit" scrollOnOpen="true" selectable="true">
+                     <font>
+                        <Font name="Myanmar Text" size="23.0" />
+                     </font>
+                  </MFXComboBox>
+                  <Label alignment="CENTER" layoutX="233.0" layoutY="42.0" prefHeight="63.0" prefWidth="265.0" styleClass="descComboBoxes" text="SELECTION SANS FILTRE" wrapText="true" />
+                  <Label alignment="CENTER" layoutX="233.0" layoutY="277.0" prefHeight="63.0" prefWidth="265.0" styleClass="descComboBoxes" text="SELECTION AVEC FILTRE" wrapText="true" />
+                  <Label fx:id="tellChosenPlace_left" layoutX="199.0" layoutY="597.0" prefHeight="91.0" prefWidth="460.0" styleClass="tellChosenPlace" text="Faites votre choix" />
+               </children></AnchorPane>
+          <AnchorPane fx:id="splitPaneMiddle" minHeight="0.0" minWidth="0.0" prefHeight="750.0" prefWidth="69.0" styleClass="splitPanePart" SplitPane.resizableWithParent="false">
+               <children>
+                  <HBox fx:id="comparisonChoice" alignment="CENTER" layoutX="-319.0" layoutY="21.0" prefHeight="86.0" prefWidth="900.0" spacing="80.0" visible="false">
+                     <children>
+                        <MFXRadioButton fx:id="comparisonOuverture" onAction="#fillListsOpen" prefHeight="50.0" prefWidth="54.0" selected="true" styleClass="comparisonOptions" text="Ouverture">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="comparisonChoiceToggleGroup" />
+                           </toggleGroup>
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </MFXRadioButton>
+                        <MFXRadioButton onAction="#fillListsGastronomy" styleClass="comparisonOptions" text="Gastronomie" toggleGroup="$comparisonChoiceToggleGroup" />
+                        <MFXRadioButton layoutX="200.0" layoutY="50.0" onAction="#fillListsCulture" prefHeight="58.0" prefWidth="151.0" styleClass="comparisonOptions" text="Culture" toggleGroup="$comparisonChoiceToggleGroup" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <Label fx:id="resultsInfo" layoutX="-43.0" layoutY="132.0" prefHeight="438.0" prefWidth="352.0" text="Label" visible="false" wrapText="true" />
+                  <Pane fx:id="firstPlaceResultsContainer" layoutX="14.0" layoutY="132.0" prefHeight="585.0" prefWidth="550.0" styleClass="resultContainer" visible="false">
+                     <children>
+                        <Label fx:id="firstPlaceNameInResults" alignment="TOP_LEFT" prefHeight="227.0" prefWidth="470.0" styleClass="placeNameInResults" text="Label" wrapText="true" />
+                        <JFXListView fx:id="firstResultList" layoutX="20.0" layoutY="60.0" prefHeight="70.0" prefWidth="510.0" styleClass="resultLists" />
+                        <Label fx:id="firstDescEndroit" contentDisplay="RIGHT" layoutX="30.0" layoutY="379.0" prefHeight="82.0" prefWidth="419.0" styleClass="results" wrapText="true" />
+                        <Label fx:id="firstLeurSite" alignment="TOP_LEFT" layoutX="30.0" layoutY="463.0" prefHeight="129.0" prefWidth="356.0" styleClass="results" />
+                        <Hyperlink fx:id="firstLinkToPlaceSite" layoutX="155.0" layoutY="453.0" onAction="#goToWebsiteFirst" prefHeight="42.0" prefWidth="405.0" textFill="#00a4ff">
+                           <font>
+                              <Font size="22.0" />
+                           </font></Hyperlink>
+                        <Rating fx:id="firstRating" layoutX="264.0" layoutY="535.0" partialRating="true" visible="false" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="secondPlaceResultsContainer" layoutX="127.0" layoutY="132.0" prefHeight="585.0" prefWidth="550.0" styleClass="resultContainer" visible="false">
+                     <children>
+                        <Label fx:id="secondPlaceNameInResults" alignment="TOP_LEFT" prefHeight="308.0" prefWidth="458.0" styleClass="placeNameInResults" text="Label" wrapText="true" />
+                        <JFXListView fx:id="secondResultList" layoutX="20.0" layoutY="60.0" prefHeight="70.0" prefWidth="510.0" styleClass="resultLists" />
+                        <Label fx:id="secondDescEndroit" contentDisplay="RIGHT" layoutX="30.0" layoutY="379.0" prefHeight="82.0" prefWidth="419.0" styleClass="results" wrapText="true" />
+                        <Label fx:id="secondLeurSite" alignment="TOP_LEFT" layoutX="30.0" layoutY="463.0" prefHeight="129.0" prefWidth="356.0" styleClass="results" />
+                        <Hyperlink fx:id="secondLinkToPlaceSite" layoutX="155.0" layoutY="453.0" onAction="#goToWebsiteSecond" prefHeight="42.0" prefWidth="417.0" textFill="#00a4ff">
+                           <font>
+                              <Font size="22.0" />
+                           </font></Hyperlink>
+                        <Rating fx:id="secondRating" layoutX="264.0" layoutY="535.0" partialRating="true" visible="false" />
+                     </children>
+                  </Pane>
+                  <MFXToggleButton fx:id="resultsToggleButton" contentDisposition="BOTTOM" gap="6.0" layoutX="7.0" layoutY="621.0" length="60.0" prefHeight="107.0" prefWidth="256.0" radius="16.0" text="RESULTATS">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                     <rotationAxis>
+                        <Point3D />
+                     </rotationAxis>
+                  </MFXToggleButton>
+               </children></AnchorPane>
+            <AnchorPane fx:id="splitPaneRight" prefHeight="200.0" prefWidth="200.0" styleClass="splitPanePart">
+               <children>
+                  <MFXFilterComboBox fx:id="mfxFilterComboBox_right" layoutX="126.0" layoutY="357.0" onMouseClicked="#getEndroit3" prefHeight="58.0" prefWidth="249.0">
+                     <tooltip>
+                        <Tooltip fx:id="tooltipFilterComboBox_right" styleClass="tooltips" text="Sélectionner une ville">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </MFXFilterComboBox>
+                  <MFXComboBox fx:id="mfxComboBox_right" allowEdit="true" borderGap="50.0" floatingText="Endroit" floatingTextGap="8.0" layoutX="81.0" layoutY="129.0" measureUnitGap="8.0" onMouseClicked="#getEndroit4" prefHeight="70.0" prefWidth="346.0" promptText="Endroit" scrollOnOpen="true" selectable="true">
+                     <font>
+                        <Font name="Myanmar Text" size="23.0" />
+                     </font>
+                     <rotationAxis>
+                        <Point3D />
+                     </rotationAxis>
+                  </MFXComboBox>
+                  <Label alignment="CENTER" layoutX="122.0" layoutY="42.0" prefHeight="63.0" prefWidth="265.0" styleClass="descComboBoxes" text="SELECTION SANS FILTRE" wrapText="true">
+                     <rotationAxis>
+                        <Point3D />
+                     </rotationAxis></Label>
+                  <Label alignment="CENTER" layoutX="114.0" layoutY="277.0" prefHeight="63.0" prefWidth="265.0" styleClass="descComboBoxes" text="SELECTION AVEC FILTRE" wrapText="true" />
+                  <Label fx:id="tellChosenPlace_right" layoutX="89.0" layoutY="593.0" prefHeight="106.0" prefWidth="390.0" styleClass="tellChosenPlace" text="Faites votre choix" />
+               </children>
+            </AnchorPane>
+        </items>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </SplitPane>
+      <Label fx:id="labelWarning" contentDisplay="RIGHT" layoutX="405.0" layoutY="23.0" prefHeight="70.0" prefWidth="982.0" textFill="RED">
+         <font>
+            <Font size="31.0" />
+         </font>
+         <graphic>
+            <FontIcon fx:id="iconWarningRight" iconColor="RED" iconLiteral="ci-warning-alt-filled" iconSize="70" selectionEnd="1" smooth="false" visible="false" wrappingWidth="24.7999267578125">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.4576043068640646">
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5204707349899876">
+                           <color>
+                              <Color red="1.0" green="0.6015228629112244" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.6581426648721399">
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </FontIcon>
+         </graphic>
+      </Label>
+      <FontIcon fx:id="iconWarningLeft" iconColor="RED" iconLiteral="ci-warning-alt-filled" iconSize="70" layoutX="342.0" layoutY="82.0" selectionEnd="1" smooth="false" visible="false" wrappingWidth="24.7999267578125">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.4576043068640646">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5204707349899876">
+                     <color>
+                        <Color red="1.0" green="0.6015228629112244" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.6581426648721399">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill></FontIcon>
+   </children>
+</AnchorPane>

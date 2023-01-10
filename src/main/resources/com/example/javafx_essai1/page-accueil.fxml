@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ap" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="864.0" prefWidth="1536.0" stylesheets="@style_accueil2.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_essai1.PageAccueilController">
+   <children>
+      <Label fx:id="titreAccueil" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="-4.0" prefHeight="264.0" prefWidth="1536.0" text="GRAPH MAP ANALYSIS" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Gadugi" size="96.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.2741962969303131" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.586340806880478">
+                     <color>
+                        <Color green="0.6310487985610962" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.9080885008042543">
+                     <color>
+                        <Color green="0.12851084768772125" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="0.12851084768772125" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Pane fx:id="buttonBackgroundPane_top_left" layoutX="195.0" layoutY="273.0" prefHeight="210.0" prefWidth="438.0" styleClass="buttonBackgroundPane" />
+      <Pane fx:id="buttonBackgroundPane_top_right" layoutX="923.0" layoutY="280.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="198.0" prefWidth="424.0" styleClass="buttonBackgroundPane" />
+      <Pane fx:id="buttonBackgroundPane_bottom_left" layoutX="217.0" layoutY="581.0" prefHeight="200.0" prefWidth="428.0" styleClass="buttonBackgroundPane" />
+      <Pane fx:id="buttonBackgroundPane_bottom_right" layoutX="918.0" layoutY="583.0" prefHeight="197.0" prefWidth="411.0" styleClass="buttonBackgroundPane" />
+      <MFXButton fx:id="quitButtonInAccueil" alignment="CENTER" buttonType="RAISED" layoutX="34.0" layoutY="21.0" onAction="#closeApp" prefHeight="54.0" prefWidth="134.0" rippleColor="RED" text="QUITTER" textOverrun="CLIP">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </MFXButton>
+      <MFXButton fx:id="boutonVisualisation" layoutX="225.0" layoutY="300.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#openVisualisation" prefHeight="90.0" prefWidth="390.0" rippleAnimationSpeed="0.8" rippleBackgroundOpacity="0.25" rippleColor="#42ff4f" styleClass="choiceButton, choiceButtonTop, choiceButtonLeft" text="VISUALISATION" textFill="WHITE" />
+      <MFXButton fx:id="boutonInfos" layoutX="935.0" layoutY="300.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#openInfos" prefHeight="90.0" prefWidth="390.0" rippleAnimationSpeed="0.8" rippleBackgroundOpacity="0.25" rippleColor="#00ff04" styleClass="choiceButton, choiceButtonTop, choiceButtonRight" text="INFOS ET FAQ" textFill="WHITE" />
+      <MFXButton fx:id="boutonVoisins" layoutX="225.0" layoutY="600.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#openVoisins" prefHeight="90.0" prefWidth="390.0" rippleAnimationSpeed="0.8" rippleBackgroundOpacity="0.25" styleClass="choiceButton, choiceButtonBottom, choiceButtonLeft" text="VOISINS" textFill="WHITE">
+         <rippleColor>
+            <RadialGradient centerX="0.5" centerY="0.5" cycleMethod="REFLECT" radius="0.674311891608282">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.8317631224764467">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="0.9490196108818054" blue="0.1568627506494522" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </rippleColor></MFXButton>
+      <MFXButton fx:id="boutonComparaisons" layoutX="935.0" layoutY="600.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#openComparaison" prefHeight="90.0" prefWidth="390.0" rippleAnimationSpeed="0.8" rippleBackgroundOpacity="0.25" rippleColor="#00ff04" styleClass="choiceButton, choiceButtonBottom, choiceButtonRight" text="COMPARAISON" textFill="WHITE" />
+      <Label fx:id="buttonDesc_top_right" alignment="CENTER" layoutX="933.0" layoutY="399.0" prefHeight="64.0" prefWidth="403.0" text="Savoir Quels endroits contient le graphe et avoir la réponse à certaines questions" wrapText="true">
+         <styleClass>
+            <String fx:value="descChoiceButton" />
+            <String fx:value="descChoiceButtonRight" />
+         </styleClass>
+      </Label>
+      <Label fx:id="buttonDesc_top_left" alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="232.0" layoutY="400.0" prefHeight="64.0" prefWidth="380.0" text="Visualiser le graphe avec tous les endroits et toutes les routes" textOverrun="WORD_ELLIPSIS" wrapText="true">
+         <styleClass>
+            <String fx:value="descChoiceButton" />
+            <String fx:value="descChoiceButtonLeft" />
+         </styleClass>
+      </Label>
+      <Label fx:id="buttonDesc_bottom_right" alignment="CENTER" layoutX="929.0" layoutY="701.0" prefHeight="64.0" prefWidth="400.0" text="Comparer 2 villes selon si elles sont plus ou moins à proximité d'autres villes, restaurants ou loisirs" wrapText="true">
+         <styleClass>
+            <String fx:value="descChoiceButton" />
+            <String fx:value="descChoiceButtonRight" />
+         </styleClass>
+      </Label>
+      <Label fx:id="buttonDesc_bottom_left" alignment="CENTER" layoutX="226.0" layoutY="702.0" prefHeight="64.0" prefWidth="405.0" text="Connaître les voisins d'un ou plusieurs endroits à distance directe ou à 2-distance" wrapText="true">
+         <styleClass>
+            <String fx:value="descChoiceButton" />
+            <String fx:value="descChoiceButtonLeft" />
+         </styleClass>
+      </Label>
+   </children>
+</AnchorPane>

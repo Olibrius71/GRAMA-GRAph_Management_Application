@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXFilterComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXRadioButton?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<!--
+<VBox fx:id="distChoiceContainer" alignment="CENTER" layoutX="255.0" layoutY="377.0" prefHeight="117.0" prefWidth="271.0">
+                                             <children>
+                                                <MFXRadioButton fx:id="radioDirect" prefHeight="46.0" prefWidth="233.0" radius="10.0" selected="true" text="Voisins directs" textExpand="true">
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="choixDist" />
+                                                   </toggleGroup>
+                                                </MFXRadioButton>
+                                                <MFXRadioButton fx:id="radio2Dist" prefHeight="42.0" prefWidth="187.0" text="Voisins 2 distance" toggleGroup="$choixDist" />
+                                             </children>
+                                          </VBox>
+-->
+<!--
+
+
+-->
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="864.0" prefWidth="1536.0" stylesheets="@style_accueil.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_essai1.HelloController">
+   <children>
+      <SplitPane fx:id="splitPane" dividerPositions="0.52" layoutY="100.0" prefHeight="770.0" prefWidth="1536.0">
+         <items>
+            <AnchorPane fx:id="splitPaneLeft" minHeight="0.0" minWidth="0.0" prefHeight="770.0" prefWidth="774.0">
+               <children>
+                  <TabPane fx:id="tabPane" prefHeight="770.0" prefWidth="1203.0" tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab text="Untitled Tab 1">
+                           <content>
+                              <AnchorPane fx:id="resultContainer" minHeight="0.0" minWidth="0.0" prefHeight="742.0" prefWidth="1467.0" styleClass="resultContainers">
+                                 <children>
+                                    <Label fx:id="result" layoutX="53.0" layoutY="69.0" prefHeight="91.0" prefWidth="657.0" styleClass="results" text="Effectuez une requête pour voir ici les résultats" wrapText="true">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font></Label>
+                                    <JFXListView fx:id="resultList" layoutX="53.0" layoutY="184.0" maxHeight="1000.0" prefHeight="50.0" prefWidth="647.0" styleClass="resultLists" visible="false" />
+                                    <Label fx:id="descEndroit" contentDisplay="RIGHT" layoutX="53.0" layoutY="489.0" prefHeight="82.0" prefWidth="419.0" styleClass="results" wrapText="true" />
+                                    <Label fx:id="leurSite" alignment="TOP_LEFT" layoutX="53.0" layoutY="583.0" prefHeight="129.0" prefWidth="356.0" styleClass="results" />
+                                    <Hyperlink fx:id="linkToPlaceSite" layoutX="173.0" layoutY="576.0" onAction="#goToWebsite" prefHeight="42.0" prefWidth="615.0" textFill="#00a4ff">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font></Hyperlink>
+                                    <MFXButton fx:id="connaitreSesVoisins" layoutX="470.0" layoutY="510.0" onAction="#getNeighborsOfNeighbor" prefHeight="46.0" prefWidth="220.0" styleClass="connaitreSesVoisinsClass" text="CONNAITRE SES VOISINS" visible="false">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <rippleColor>
+                                          <LinearGradient cycleMethod="REFLECT" endX="0.6856060895052822" endY="1.0" startX="0.6742423727656855">
+                                             <stops>
+                                                <Stop>
+                                                   <color>
+                                                      <Color red="1.0" green="0.9565989971160889" blue="0.10000000149011612" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="0.006729475100942127">
+                                                   <color>
+                                                      <Color red="1.0" green="0.9565989971160889" blue="0.10000000149011612" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="0.35800807537012114">
+                                                   <color>
+                                                      <Color red="1.0" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="0.5497160489774481">
+                                                   <color>
+                                                      <Color red="1.0" green="0.10999999940395355" blue="0.10999999940395355" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="0.6796769851951546">
+                                                   <color>
+                                                      <Color red="1.0" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="0.9617995601221145">
+                                                   <color>
+                                                      <Color red="0.9480456709861755" green="1.0" blue="0.10999999940395355" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                   <color>
+                                                      <Color red="0.9480456709861755" green="1.0" blue="0.10999999940395355" />
+                                                   </color>
+                                                </Stop>
+                                             </stops>
+                                          </LinearGradient>
+                                       </rippleColor>
+                                       <rotationAxis>
+                                          <Point3D />
+                                       </rotationAxis>
+                                    </MFXButton>
+                                    <Rating fx:id="rating" layoutX="274.0" layoutY="652.0" partialRating="true" visible="false" />
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="splitPaneRight" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <MFXComboBox fx:id="mfxComboBox" allowEdit="true" borderGap="50.0" floatingText="Endroit" floatingTextGap="8.0" layoutX="346.0" layoutY="110.0" measureUnitGap="8.0" onMouseClicked="#getEndroit2" prefHeight="70.0" prefWidth="346.0" promptText="Endroit" scrollOnOpen="true" selectable="true">
+                     <font>
+                        <Font name="Myanmar Text" size="23.0" />
+                     </font>
+                  </MFXComboBox>
+                  <MFXButton fx:id="boutonNouveau" layoutX="288.0" layoutY="595.0" onAction="#createNewTabWindow" prefHeight="60.0" prefWidth="152.0" rippleColor="#5ae3ff" text="NOUVEAU" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+                     <font>
+                        <Font name="Roboto" size="24.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip fx:id="tooltipBoutonNouveau" styleClass="tooltips" text="Nouvelle requête">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </MFXButton>
+                  <MFXFilterComboBox fx:id="mfxFilterComboBox" layoutX="48.0" layoutY="110.0" onMouseClicked="#getEndroit3" prefHeight="58.0" prefWidth="249.0">
+                     <tooltip>
+                        <Tooltip fx:id="tooltipFilterComboBox" styleClass="tooltips" text="Sélectionner une ville">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </MFXFilterComboBox>
+                  <Label alignment="CENTER" layoutX="40.0" layoutY="35.0" prefHeight="63.0" prefWidth="265.0" styleClass="descComboBoxes" text="SELECTION AVEC FILTRE" wrapText="true" />
+                  <Label alignment="CENTER" layoutX="345.0" layoutY="36.0" prefHeight="63.0" prefWidth="345.0" styleClass="descComboBoxes" text="SELECTION SANS FILTRE" wrapText="true" />
+                  <VBox fx:id="distChoiceContainer" alignment="CENTER" layoutX="253.0" layoutY="371.0" prefHeight="109.0" prefWidth="319.0">
+                     <children>
+                        <MFXRadioButton fx:id="radioDirect" alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="231.0" selected="true" text="Voisins Directs" textExpand="true">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="distChoice" />
+                           </toggleGroup>
+                        </MFXRadioButton>
+                        <MFXRadioButton fx:id="radio2Dist" alignment="CENTER_LEFT" text="Voisins 2-Distance" textExpand="true" toggleGroup="$distChoice" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <MFXButton fx:id="quitButton" alignment="CENTER" buttonType="RAISED" depthLevel="LEVEL5" layoutX="32.0" layoutY="24.0" onAction="#closeApp" prefHeight="54.0" prefWidth="134.0" rippleColor="RED" text="QUITTER" textOverrun="CLIP">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </MFXButton>
+      <MFXButton fx:id="backButton" alignment="CENTER" buttonType="RAISED" layoutX="197.0" layoutY="28.0" onAction="#closeFunctionnality" prefHeight="13.0" prefWidth="134.0" rippleColor="RED" text="RETOUR" textOverrun="CLIP">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </MFXButton>
+      <Label fx:id="labelWarning" alignment="CENTER" contentDisplay="RIGHT" layoutX="405.0" layoutY="23.0" prefHeight="70.0" prefWidth="1083.0" textFill="RED">
+         <font>
+            <Font size="31.0" />
+         </font>
+         <graphic>
+            <FontIcon fx:id="iconWarningRight" iconLiteral="ci-warning-alt-filled" iconSize="70" selectionEnd="1" smooth="false" visible="false" wrappingWidth="24.7999267578125">
+               <iconColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.45491251682368783">
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5097560975609755">
+                           <color>
+                              <Color red="1.0" green="0.494923859834671" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.6527590847913862">
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </iconColor>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.4576043068640646">
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5204707349899876">
+                           <color>
+                              <Color red="1.0" green="0.6015228629112244" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.6581426648721399">
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </FontIcon>
+         </graphic>
+      </Label>
+      <FontIcon fx:id="iconWarningLeft" iconLiteral="ci-warning-alt-filled" iconSize="70" layoutX="342.0" layoutY="82.0" selectionEnd="1" smooth="false" visible="false" wrappingWidth="24.7999267578125">
+         <iconColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.45491251682368783">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5097560975609755">
+                     <color>
+                        <Color red="1.0" green="0.494923859834671" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.6527590847913862">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </iconColor>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.4576043068640646">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5204707349899876">
+                     <color>
+                        <Color red="1.0" green="0.6015228629112244" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.6581426648721399">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill></FontIcon>
+      <FontIcon layoutX="479.0" layoutY="56.0" />
+   </children>
+</AnchorPane>

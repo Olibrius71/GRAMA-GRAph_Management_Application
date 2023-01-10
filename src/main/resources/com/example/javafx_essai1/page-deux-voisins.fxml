@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="864.0" prefWidth="1536.0" stylesheets="@style_deux_voisins.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_essai1.PageDeuxVoisinsController">
+   <children>
+      <MFXButton fx:id="quitButton" alignment="CENTER" buttonType="RAISED" depthLevel="LEVEL5" layoutX="32.0" layoutY="24.0" onAction="#closeApp" prefHeight="54.0" prefWidth="134.0" rippleColor="RED" text="QUITTER" textOverrun="CLIP">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </MFXButton>
+      <MFXButton fx:id="backButton" alignment="CENTER" buttonType="RAISED" layoutX="197.0" layoutY="28.0" onAction="#closeFunctionnality" prefHeight="13.0" prefWidth="134.0" text="RETOUR" textOverrun="CLIP">
+      <font>
+         <Font size="22.0" />
+      </font>
+         <rippleColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3400000035762787" green="0.3400000035762787" blue="0.3400000035762787" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.029268292682926824">
+                     <color>
+                        <Color red="0.3400000035762787" green="0.3400000035762787" blue="0.3400000035762787" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.15032006040114218">
+                     <color>
+                        <Color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.30686406460296095">
+                     <color>
+                        <Color red="0.5368421077728271" green="0.5368421077728271" blue="0.5368421077728271" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5024390243902438">
+                     <color>
+                        <Color red="0.1899999976158142" green="0.1899999976158142" blue="0.1899999976158142" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7">
+                     <color>
+                        <Color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.8519515477792734">
+                     <color>
+                        <Color red="0.34736841917037964" green="0.34736841917037964" blue="0.34736841917037964" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.9054722121918392">
+                     <color>
+                        <Color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.34736841917037964" green="0.34736841917037964" blue="0.34736841917037964" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </rippleColor>
+      </MFXButton>
+      <Label alignment="CENTER" layoutX="354.0" layoutY="19.0" prefHeight="97.0" prefWidth="842.0" text="ENDROITS ET FAQ" textFill="WHITE">
+         <font>
+            <Font size="96.0" />
+         </font>
+      </Label>
+      <FontIcon fx:id="arrowIcon1" iconColor="WHITE" iconLiteral="ti-control-forward" iconSize="80" layoutX="339.0" layoutY="422.0" selectionEnd="0" />
+      <FontIcon fx:id="arrowIcon2" iconColor="WHITE" iconLiteral="ti-control-forward" iconSize="80" layoutX="594.0" layoutY="421.0" selectionEnd="0" />
+      <FontIcon fx:id="arrowIcon3" iconColor="WHITE" iconLiteral="ti-control-forward" iconSize="80" layoutX="838.0" layoutY="419.0" selectionEnd="0" />
+      <FontIcon fx:id="arrowIcon4" iconColor="WHITE" iconLiteral="ti-control-forward" iconSize="80" layoutX="1103.0" layoutY="418.0" selectionEnd="0" />
+      <Label fx:id="clickezLabel" alignment="TOP_CENTER" layoutX="211.0" layoutY="407.0" prefHeight="374.0" prefWidth="1074.0" text="CLIQUEZ SUR CE QUI VOUS INTÉRESSE" />
+      <Accordion fx:id="accordion" layoutY="170.0" prefHeight="694.0" prefWidth="1536.0">
+        <panes>
+          <TitledPane animated="false" styleClass="accordionTitle" text="Endroits du Graphe">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                         <Pane fx:id="firstPlaceResultsContainer" layoutX="25.0" layoutY="15.0" prefHeight="548.0" prefWidth="480.0" styleClass="endroitContainer">
+                             <children>
+                                 <Label fx:id="firstPlaceNameInResults" alignment="CENTER" prefHeight="71.0" prefWidth="470.0" styleClass="typeDesc" text="Les Villes (19)" wrapText="true" />
+                                 <JFXListView fx:id="villesList" layoutX="20.0" layoutY="60.0" prefHeight="70.0" prefWidth="455.0" styleClass="endroitLists" />
+                                 <Label fx:id="descVille" contentDisplay="RIGHT" layoutX="30.0" layoutY="379.0" prefHeight="82.0" prefWidth="419.0" styleClass="results" wrapText="true" />
+                                 <Label fx:id="villeLeurSite" layoutX="30.0" layoutY="463.0" prefHeight="71.0" prefWidth="356.0" styleClass="results" />
+                                 <Hyperlink fx:id="villeLink" layoutX="156.0" layoutY="477.0" onAction="#goToWebsiteVille" prefHeight="42.0" prefWidth="320.0" textFill="#00a4ff">
+                                     <font>
+                                         <Font size="22.0" />
+                                     </font></Hyperlink>
+                             </children>
+                         </Pane>
+                        <Pane layoutX="529.0" layoutY="15.0" prefHeight="548.0" prefWidth="480.0" styleClass="endroitContainer">
+                           <children>
+                                 <Label alignment="CENTER" prefHeight="71.0" prefWidth="470.0" styleClass="typeDesc" text="Les Restaurants (6)" wrapText="true" />
+                                 <JFXListView fx:id="restaurantsList" layoutX="10.0" layoutY="60.0" prefHeight="70.0" prefWidth="455.0" styleClass="endroitLists" />
+                                 <Label fx:id="descRestaurant" contentDisplay="RIGHT" layoutX="7.0" layoutY="353.0" prefHeight="96.0" prefWidth="464.0" styleClass="results" wrapText="true" />
+                                 <Label fx:id="restaurantLeurSite" alignment="TOP_LEFT" layoutX="9.0" layoutY="436.0" prefHeight="85.0" prefWidth="356.0" styleClass="results" />
+                                 <Hyperlink fx:id="restaurantLink" layoutX="119.0" layoutY="433.0" onAction="#goToWebsiteRestaurant" prefHeight="42.0" prefWidth="354.0" textFill="#00a4ff">
+                                     <font>
+                                         <Font size="22.0" />
+                                     </font></Hyperlink>
+                                 <Rating fx:id="restaurantRating" layoutX="235.0" layoutY="475.0" partialRating="true" visible="false" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="1032.0" layoutY="15.0" prefHeight="548.0" prefWidth="480.0" styleClass="endroitContainer">
+                           <children>
+                                 <Label alignment="CENTER" prefHeight="71.0" prefWidth="470.0" styleClass="typeDesc" text="Les Loisirs (6)" wrapText="true" />
+                                 <JFXListView fx:id="loisirsList" layoutX="16.0" layoutY="60.0" prefHeight="70.0" prefWidth="455.0" styleClass="endroitLists" />
+                                 <Label fx:id="descLoisir" contentDisplay="RIGHT" layoutX="10.0" layoutY="349.0" prefHeight="87.0" prefWidth="462.0" styleClass="results" wrapText="true" />
+                                 <Label fx:id="loisirLeurSite" alignment="TOP_LEFT" layoutX="10.0" layoutY="421.0" prefHeight="129.0" prefWidth="479.0" styleClass="results" />
+                                 <Hyperlink fx:id="loisirLink" layoutX="125.0" layoutY="418.0" onAction="#goToWebsiteLoisir" prefHeight="42.0" prefWidth="352.0" textFill="#00a4ff">
+                                     <font>
+                                         <Font size="22.0" />
+                                     </font></Hyperlink>
+                                 <Rating fx:id="loisirRating" layoutX="235.0" layoutY="464.0" partialRating="true" visible="false" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane fx:id="faq" animated="false" styleClass="accordionTitle" text="FAQ">
+            <content>
+              <AnchorPane fx:id="faqAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <MFXScrollPane fx:id="faqScrollPane" layoutX="30.0" layoutY="27.0" pannable="true" prefHeight="523.0" prefWidth="1471.0" thumbColor="RED" thumbHoverColor="#ffed00" trackColor="#9000ff" vbarPolicy="ALWAYS">
+                           <padding>
+                              <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                           </padding>
+                           <content>
+                              <StackPane fx:id="faqStackPane" alignment="TOP_LEFT" prefHeight="644.0" prefWidth="1378.0">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <children>
+                                    <VBox fillWidth="false" maxHeight="165.0" prefHeight="261.0" prefWidth="1369.0" spacing="25.0" styleClass="questionContainer">
+                                       <children>
+                                          <Label styleClass="questionTitle" text="Que signifie &quot;Voisin à 2-Distance&quot;?" underline="true">
+                                             <graphic>
+                                                <FontIcon iconLiteral="ti-control-forward" iconSize="42" />
+                                             </graphic>
+                                          </Label>
+                                          <Label alignment="TOP_LEFT" prefHeight="101.0" prefWidth="1369.0" styleClass="questionAnswer" text="     - Un endroit est &quot;Voisin 2-Distance&quot; à un autre endroit quand on ne peut pas se rendre de l'un à l'autre directement mais on le peut en passant par un seul autre endroit" wrapText="true" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fillWidth="false" maxHeight="160.0" prefHeight="222.0" prefWidth="1369.0" spacing="25.0" styleClass="questionContainer">
+                                       <children>
+                                          <Label styleClass="questionTitle" text="Titre question 2?" underline="true">
+                                             <graphic>
+                                                <FontIcon iconLiteral="ti-control-forward" iconSize="42" />
+                                             </graphic>
+                                          </Label>
+                                          <Label alignment="TOP_LEFT" prefHeight="101.0" prefWidth="1369.0" styleClass="questionAnswer" text="     - On mettra ici la réponse à la question 2" wrapText="true" />
+                                       </children>
+                                       <StackPane.margin>
+                                          <Insets top="200.0" />
+                                       </StackPane.margin>
+                                    </VBox>
+                                    <VBox fillWidth="false" layoutX="15.0" layoutY="215.0" maxHeight="249.0" prefHeight="222.0" prefWidth="1369.0" spacing="25.0" styleClass="questionContainer">
+                                       <children>
+                                          <Label styleClass="questionTitle" text="Titre question 3?" underline="true">
+                                             <graphic>
+                                                <FontIcon iconLiteral="ti-control-forward" iconSize="42" />
+                                             </graphic>
+                                          </Label>
+                                          <Label alignment="TOP_LEFT" prefHeight="101.0" prefWidth="1369.0" styleClass="questionAnswer" text="     - On mettra ici la réponse à la queston 3" wrapText="true" />
+                                       </children>
+                                       <StackPane.margin>
+                                          <Insets top="400.0" />
+                                       </StackPane.margin>
+                                    </VBox>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets bottom="50.0" top="50.0" />
+                                 </opaqueInsets>
+                              </StackPane>
+                           </content>
+                        </MFXScrollPane>
+                     </children></AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+   </children>
+</AnchorPane>

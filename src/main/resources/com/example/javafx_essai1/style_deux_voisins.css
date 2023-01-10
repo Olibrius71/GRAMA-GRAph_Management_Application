@@ -1,0 +1,108 @@
+.root {
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #000000 0.0%, #000000 38.4644%, #ff0000 64.0354%, #fc0000 80.8883%, #000000 91.0097%, #000000 100.0%);
+}
+
+#quitButton {
+    -fx-background-color: linear-gradient(to bottom left, cyan, green);
+}
+#quitButton:hover {
+    -fx-background-color: linear-gradient(to bottom left, orangered, deeppink);
+}
+
+#backButton {
+    -fx-background-color: #121212;
+    -fx-text-fill: #EDEDED;
+}
+#backButton:hover {
+    -fx-background-color: mediumblue;
+}
+
+
+.accordionTitle {
+    -fx-font-size: 27;
+    -fx-text-fill: white;
+}
+
+.accordion .titled-pane > *.content{
+    -fx-background-color: black ;
+}
+
+.accordion .titled-pane .title {
+    -fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance -91.7431% , center 39.8678% 51.8939%, radius 56.422%, reflect, #575757 0.0%, #575757 0.6729%, #575757 20.1858%, #00ff37 100.0%);
+}
+
+
+.endroitLists {
+    -fx-background-color: turquoise;
+    -fx-font: 15 "Myanmar Text";
+}
+
+.endroitLists .list-cell {
+    -fx-background-insets: 1;
+    -fx-background-color: #1A2F73;
+    -fx-text-fill: lime;
+    -fx-font-size: 18;
+}
+
+.endroitLists .list-cell:hover {
+    -fx-background-color: lime;
+    -fx-text-fill: aquamarine;
+}
+
+
+.endroitLists .list-cell .jfx-rippler {
+    -fx-rippler-fill: ORANGE;
+}
+
+
+.endroitContainer {
+    -fx-background-color: antiquewhite;
+}
+
+
+.typeDesc {
+    -fx-text-fill: black;
+    -fx-font-size: 28;
+}
+
+.results {
+    -fx-text-fill: black;
+    -fx-font-size: 28;
+}
+
+
+
+.questionContainer {
+    -fx-background-color: black;
+    -fx-border-color: lime;
+    -fx-border-width: 4;
+    -fx-border-style: dashed;
+    -fx-stroke-width: 6;
+}
+
+.questionTitle {
+    -fx-font-size: 29;
+    -fx-text-fill: white;
+}
+
+.questionAnswer {
+    -fx-text-fill: white;
+/*  -fx-font-size: ; */
+}
+
+
+#faqAnchorPane {
+    -fx-background-color: antiquewhite;
+    /*linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #575757 0.0%, #575757 2.9268%, #898989 30.6864%, #575757 49.7561%, #595959 91.9246%, #595959 100.0%)*/
+}
+
+#faqScrollPane, #faqStackPane {
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #575757 0.0%, #575757 2.9268%, #333333 15.032%, #898989 30.6864%, #303030 50.2439%, #333333 70.0%, #595959 85.1952%, #333333 90.5472%, #595959 100.0%);
+}
+
+
+#clickezLabel {
+    -fx-text-fill: white;
+    -fx-font-size: 58;
+}
+

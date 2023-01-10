@@ -1,0 +1,122 @@
+.root {
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #000000 0.0%, #000000 38.4644%, #00f228 64.0354%, #00ff37 80.8883%, #000000 91.0097%, #000000 100.0%);
+}
+
+#quitButton {
+    -fx-background-color: linear-gradient(to bottom left, cyan, green);
+}
+#quitButton:hover {
+    -fx-background-color: linear-gradient(to bottom left, orangered, deeppink);
+}
+
+#backButton {
+    -fx-background-color: #121212;
+    -fx-text-fill: #EDEDED;
+}
+#backButton:hover {
+    -fx-background-color: mediumblue;
+}
+
+.tooltips {
+    -fx-text-fill: lime;
+    -fx-background-color: #222222;
+}
+
+#resultsToggleButton {
+    -fx-background-color: radial-gradient(focus-angle 159.51deg, focus-distance 100.0% , center 50.0% 50.0%, radius 36.2385%, reflect, #fa0000 0.0%, #fa0000 38.922%, #00fa08 88.1561%, #00cafa 97.5876%, #00cafa 100.0%);
+}
+
+
+
+/*    Styling de la SplitPane    */
+
+#splitPaneLeft {
+    -fx-background-color: linear-gradient(from 0.0% 100.0% to 100.0% 100.0%, reflect, #00ff37 0.0%, #00ff37 0.6729%, #1e1e1e 20.4576%, #1e1e1e 100.0%);
+    /*
+    -fx-background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHMFdBdGuvBMJk1igLR6PpOgLNi5QOvfiPzAplpoxHKo2kWawQt93sIHO4DUngYWRYkfY&usqp=CAU');
+    -fx-background-size: cover;
+    */
+}
+
+#splitPaneRight {
+    -fx-background-color: linear-gradient(from 0.0% 100.0% to 100.0% 100.0%, reflect, #1e1e1e 0.0%, #1e1e1e 81.2921%, #00ff37 100.0%);
+}
+
+#splitPane {
+    -fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 67.4312%, reflect, #000000 0.0%, #000000 83.1763%, #00f228 100.0%);
+}
+
+/*  Fin du Styling de la SplitPane  */
+
+
+.descComboBoxes {
+    -fx-text-fill: orange;
+    -fx-font-size: 21;
+    -fx-background-color: #2A2F73;
+}
+
+
+.tellChosenPlace, .placeNameInResults {
+    -fx-text-fill: white;
+    -fx-font-size: 31;
+}
+
+
+#comparisonChoice {
+    -fx-background-color: black;
+    -fx-border-color: lime;
+    -fx-border-width: 4;
+    -fx-border-style: dashed;
+    -fx-stroke-width: 6;
+}
+
+.comparisonOptions {
+    -fx-font-size: 33;
+    -fx-text-fill: white;
+}
+
+
+#resultsInfo {
+    -fx-font-size: 26;
+    -fx-text-fill: white;
+    -fx-background-color: black;
+}
+
+.resultContainer {
+    -fx-background-color: lime;
+}
+
+#secondPlaceResultsContainer {
+    -fx-background-color: lime;
+}
+
+
+
+.resultLists {
+    -fx-background-color: turquoise;
+    -fx-font: 15 "Myanmar Text";
+}
+
+.resultLists .list-cell {
+    -fx-background-insets: 1;
+    -fx-background-color: #1A2F73;
+    -fx-text-fill: lime;
+    -fx-font-size: 18;
+}
+
+.resultLists .list-cell:hover {
+    -fx-background-color: lime;
+    -fx-text-fill: aquamarine;
+}
+
+
+.resultLists .list-cell .jfx-rippler {
+    -fx-rippler-fill: ORANGE;
+}
+
+
+.results {
+    -fx-font-size: 25;
+    -fx-text-fill: white;
+    -fx-font-family: "Sitka Display";
+}

@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<MFXScrollPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#zoomScrollPane" pannable="true" prefHeight="2240.0" prefWidth="3380.0" stylesheets="@style_affichage.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_essai1.PageAffichageController">
+   <content>
+      <AnchorPane fx:id="anchorPane" prefHeight="2240.0" prefWidth="3380.0">
+         <children>
+            <MFXButton fx:id="quitButton" alignment="CENTER" buttonType="RAISED" depthLevel="LEVEL5" layoutX="32.0" layoutY="24.0" onAction="#closeApp" prefHeight="54.0" prefWidth="134.0" rippleColor="RED" text="QUITTER" textOverrun="CLIP">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </MFXButton>
+            <MFXButton fx:id="backButton" alignment="CENTER" buttonType="RAISED" layoutX="197.0" layoutY="28.0" onAction="#closeFunctionnality" prefHeight="13.0" prefWidth="134.0" text="RETOUR" textOverrun="CLIP">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <rippleColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.3846436660867282">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.6403538719101863">
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.8088829071332437">
+                           <color>
+                              <Color red="0.9894737005233765" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.910097495322194">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </rippleColor>
+            </MFXButton>
+            <MFXComboBox fx:id="backgroundColorChoice" allowEdit="true" borderGap="50.0" floatingText="Arrière Plan" floatingTextGap="8.0" layoutX="369.0" layoutY="21.0" measureUnitGap="8.0" onMouseClicked="#getBackgroundColor" prefHeight="70.0" prefWidth="346.0" promptText="Vert" scrollOnOpen="true" selectable="true">
+               <font>
+                  <Font name="Myanmar Text" size="23.0" />
+               </font>
+            </MFXComboBox>
+            <Label fx:id="andrezieuxLabel" contentDisplay="BOTTOM" layoutX="2066.0" layoutY="604.0" prefHeight="161.0" prefWidth="166.0" styleClass="endroitName" text="Andrezieux">
+               <graphic>
+                  <FontIcon fx:id="andrezieuxIcon" accessibleText="Andrezieux" iconLiteral="mdal-home_work" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="villeIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="villeurbanneLabel" contentDisplay="BOTTOM" layoutX="1167.0" layoutY="1209.0" prefHeight="212.0" prefWidth="194.0" styleClass="endroitName" text="Villeurbanne">
+               <graphic>
+                  <FontIcon fx:id="villeurbanneIcon" accessibleText="Villeurbanne" iconLiteral="mdal-home_work" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="villeIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="caluireLabel" contentDisplay="BOTTOM" layoutX="2157.0" layoutY="1378.0" prefHeight="154.0" prefWidth="131.0" styleClass="endroitName" text="Caluire">
+               <graphic>
+                  <FontIcon fx:id="caluireIcon" accessibleText="Caluire" iconLiteral="mdal-home_work" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="villeIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="marie9eLabel" contentDisplay="BOTTOM" layoutX="1863.0" layoutY="1580.0" prefHeight="158.0" prefWidth="163.0" styleClass="endroitName" text="Marie-9e">
+               <graphic>
+                  <FontIcon fx:id="marie9eIcon" accessibleText="Marie-9e" iconLiteral="mdal-home_work" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="villeIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="fourviereLabel" contentDisplay="BOTTOM" layoutX="1544.0" layoutY="1732.0" prefHeight="154.0" prefWidth="148.0" styleClass="endroitName" text="Fourviere">
+               <graphic>
+                  <FontIcon fx:id="fourviereIcon" accessibleText="Fourviere" iconLiteral="mdal-home_work" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="villeIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="meyzieuLabel" contentDisplay="BOTTOM" layoutX="689.0" layoutY="1735.0" prefHeight="161.0" prefWidth="132.0" styleClass="endroitName" text="Meyzieu">
+               <graphic>
+                  <FontIcon fx:id="meyzieuIcon" accessibleText="Meyzieu" iconLiteral="mdal-home_work" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="villeIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="maconLabel" contentDisplay="BOTTOM" layoutX="829.0" layoutY="1389.0" prefHeight="183.0" prefWidth="131.0" styleClass="endroitName" text="Macon">
+               <graphic>
+                  <FontIcon fx:id="maconIcon" accessibleText="Macon" iconLiteral="mdal-home_work" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="villeIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="saintEtienneLabel" contentDisplay="BOTTOM" layoutX="2172.0" layoutY="374.0" prefHeight="158.0" prefWidth="186.0" styleClass="endroitName" text="Saint-Etienne">
+               <graphic>
+                  <FontIcon fx:id="saintEtienneIcon" accessibleText="Saint-etienne" iconLiteral="mdal-home_work" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="villeIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="venissieuxLabel" contentDisplay="BOTTOM" layoutX="2533.0" layoutY="420.0" prefHeight="162.0" prefWidth="161.0" styleClass="endroitName" text="Venissieux">
+               <graphic>
+                  <FontIcon fx:id="venissieuxIcon" accessibleText="Venissieux" iconLiteral="mdal-home_work" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="villeIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="roanneLabel" contentDisplay="BOTTOM" layoutX="1102.0" layoutY="522.0" prefHeight="167.0" prefWidth="125.0" styleClass="endroitName" text="Roanne">
+               <graphic>
+                  <FontIcon fx:id="roanneIcon" accessibleText="Roanne" iconLiteral="mdal-home_work" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="villeIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass>
+                  </FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="balbignyLabel" contentDisplay="BOTTOM" layoutX="1559.0" layoutY="577.0" prefHeight="174.0" prefWidth="138.0" styleClass="endroitName" text="Balbigny">
+               <graphic>
+                  <FontIcon fx:id="balbignyIcon" accessibleText="Balbigny" iconLiteral="mdal-home_work" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="villeIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="digoinLabel" contentDisplay="BOTTOM" layoutX="617.0" layoutY="1049.0" prefHeight="145.0" prefWidth="115.0" styleClass="endroitName" text="Digoin">
+               <graphic>
+                  <FontIcon fx:id="digoinIcon" accessibleText="Digoin" iconLiteral="mdal-home_work" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="villeIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="craponneLabel" contentDisplay="BOTTOM" layoutX="1080.0" layoutY="254.0" prefHeight="186.0" prefWidth="141.0" styleClass="endroitName" text="Craponne">
+               <graphic>
+                  <FontIcon fx:id="craponneIcon" accessibleText="Craponne" iconLiteral="mdal-home_work" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="villeIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="villefrancheLabel" contentDisplay="BOTTOM" layoutX="341.0" layoutY="1815.0" prefHeight="148.0" prefWidth="177.0" styleClass="endroitName" text="Villefranche">
+               <graphic>
+                  <FontIcon fx:id="villefrancheIcon" accessibleText="Villefranche" iconLiteral="mdal-home_work" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="villeIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="genasLabel" contentDisplay="BOTTOM" layoutX="3232.0" layoutY="1360.0" prefHeight="142.0" prefWidth="112.0" styleClass="endroitName" text="Genas">
+               <graphic>
+                  <FontIcon fx:id="genasIcon" accessibleText="Genas" iconLiteral="mdal-home_work" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="villeIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="larbresleLabel" contentDisplay="BOTTOM" layoutX="1938.0" layoutY="872.0" prefHeight="164.0" prefWidth="154.0" styleClass="endroitName" text="L'arbresle">
+               <graphic>
+                  <FontIcon fx:id="larbresleIcon" accessibleText="L'arbresle" iconLiteral="mdal-home_work" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="villeIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="lesEchetsLabel" contentDisplay="BOTTOM" layoutX="1284.0" layoutY="1541.0" prefHeight="167.0" prefWidth="157.0" styleClass="endroitName" text="Les Echets">
+               <graphic>
+                  <FontIcon fx:id="lesEchetsIcon" accessibleText="Les-Echets" iconLiteral="mdal-home_work" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="villeIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass>
+                  </FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="laPalisseLabel" contentDisplay="BOTTOM" layoutX="669.0" layoutY="713.0" prefHeight="158.0" prefWidth="154.0" styleClass="endroitName" text="La Palisse">
+               <graphic>
+                  <FontIcon fx:id="laPalisseIcon" accessibleText="Lapalisse" iconLiteral="mdal-home_work" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="villeIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="burgerKingLimonestLabel" contentDisplay="BOTTOM" layoutX="3010.0" layoutY="164.0" prefHeight="196.0" prefWidth="318.0" styleClass="endroitName" text="Burger King Limonest">
+               <graphic>
+                  <FontIcon fx:id="burgerKingLimonestIcon" accessibleText="Burger-King-Limonest" iconLiteral="ci-restaurant" iconSize="126" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="restaurantIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="mcDoDecinesLabel" contentDisplay="BOTTOM" layoutX="1065.0" layoutY="1913.0" prefHeight="218.0" prefWidth="214.0" styleClass="endroitName" text="McDo Décines">
+               <graphic>
+                  <FontIcon fx:id="mcDoDecinesIcon" accessibleText="McDo-Decines" iconLiteral="ci-restaurant" iconSize="126" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="restaurantIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="subwayVaulxLabel" contentDisplay="BOTTOM" layoutX="830.0" layoutY="51.0" prefHeight="170.0" prefWidth="195.0" styleClass="endroitName" text="Subway Vaulx">
+               <graphic>
+                  <FontIcon fx:id="subwayVaulxIcon" accessibleText="Subway-Vaulx" iconLiteral="ci-restaurant" iconSize="126" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="restaurantIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="kfcSaintPriestLabel" contentDisplay="BOTTOM" layoutX="1236.0" layoutY="57.0" prefHeight="158.0" prefWidth="222.0" styleClass="endroitName" text="KFC Saint Priest">
+               <graphic>
+                  <FontIcon fx:id="kfcSaintPriestIcon" accessibleText="KFC-Saint-Priest" iconLiteral="ci-restaurant" iconSize="126" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="restaurantIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="wokVilleurbanneLabel" contentDisplay="BOTTOM" layoutX="2846.0" layoutY="1396.0" prefHeight="164.0" prefWidth="274.0" styleClass="endroitName" text="Wok Villeurbanne">
+               <graphic>
+                  <FontIcon fx:id="wokVilleurbanneIcon" accessibleText="Wok-Villeurbanne" iconLiteral="ci-restaurant" iconSize="126" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="restaurantIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="laMarinadeLabel" contentDisplay="BOTTOM" layoutX="16.0" layoutY="1849.0" prefHeight="161.0" prefWidth="181.0" styleClass="endroitName" text="La Marinade">
+               <graphic>
+                  <FontIcon fx:id="laMarinadeIcon" accessibleText="La-Marinade" iconLiteral="ci-restaurant" iconSize="126" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="restaurantIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="confluenceLabel" contentDisplay="BOTTOM" layoutX="1461.0" layoutY="2007.0" prefHeight="180.0" prefWidth="164.0" styleClass="endroitName" text="Confluence">
+               <graphic>
+                  <FontIcon fx:id="confluenceIcon" accessibleText="Confluence" iconLiteral="map-icon-amusement-park" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="loisirIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="escapeGamePerracheLabel" contentDisplay="BOTTOM" layoutX="2445.0" layoutY="1373.0" prefHeight="145.0" prefWidth="328.0" styleClass="endroitName" text="Escape Game Perrache">
+               <graphic>
+                  <FontIcon fx:id="escapeGamePerracheIcon" accessibleText="Escape-Game-Perrache" iconLiteral="map-icon-amusement-park" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="loisirIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="laserGameGenasLabel" contentDisplay="BOTTOM" layoutX="1384.0" layoutY="956.0" prefHeight="212.0" prefWidth="270.0" styleClass="endroitName" text="Laser Game Genas">
+               <graphic>
+                  <FontIcon fx:id="laserGameGenasIcon" accessibleText="Laser-Game-Genas" iconLiteral="map-icon-amusement-park" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="loisirIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="bowlingBronLabel" contentDisplay="BOTTOM" layoutX="2428.0" layoutY="2021.0" prefHeight="161.0" prefWidth="203.0" styleClass="endroitName" text="Bowling Bron">
+               <graphic>
+                  <FontIcon fx:id="bowlingBronIcon" accessibleText="Bowling-Bron" iconLiteral="map-icon-amusement-park" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="loisirIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="cinemaBrignaisLabel" contentDisplay="BOTTOM" layoutX="2678.0" layoutY="184.0" prefHeight="183.0" prefWidth="241.0" styleClass="endroitName" text="Cinéma Brignais">
+               <graphic>
+                  <FontIcon fx:id="cinemaBrignaisIcon" accessibleText="Cinema-Brignais" iconLiteral="map-icon-amusement-park" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="loisirIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="parcDeLaTeteDOrLabel" contentDisplay="BOTTOM" layoutX="2654.0" layoutY="640.0" prefHeight="174.0" prefWidth="289.0" styleClass="endroitName" text="Parc de la Tête d'Or">
+               <graphic>
+                  <FontIcon fx:id="parcDeLaTeteDOrIcon" accessibleText="Parc-de-la-tete-d'or" iconLiteral="map-icon-amusement-park" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="loisirIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass>
+                  </FontIcon>
+               </graphic>
+            </Label>
+            <Label fx:id="rillieuxLabel" contentDisplay="BOTTOM" layoutX="2079.0" layoutY="1820.0" prefHeight="129.0" prefWidth="125.0" styleClass="endroitName" text="Rillieux">
+               <graphic>
+                  <FontIcon fx:id="rillieuxIcon" accessibleText="Rillieux" iconLiteral="mdal-home_work" iconSize="120" onMouseClicked="#flashNeighbors" wrappingWidth="103.999755859375">
+                     <styleClass>
+                        <String fx:value="villeIcon" />
+                        <String fx:value="endroitIcon" />
+                     </styleClass></FontIcon>
+               </graphic>
+            </Label>
+            <ToggleButton fx:id="testToggle" layoutX="200.0" layoutY="207.0" mnemonicParsing="false" opacity="0.0" prefHeight="122.0" prefWidth="127.0" text="ToggleButton" />
+            <Line fx:id="routeLaMarinadeVillefranche" endX="-100.39996337890625" endY="1712.0" fill="BLACK" layoutX="466.0" layoutY="212.0" startX="-356.39996337890625" startY="1747.199951171875" styleClass="routes" />
+            <Line fx:id="routeMeyzieuMacon" endX="515.6001586914062" endY="295.0" layoutX="250.0" layoutY="1469.0" startX="598.8001098632812" startY="45.4000244140625" styleClass="routes" />
+            <Line fx:id="routeVillefrancheMeyzieu" endX="429.00006103515625" endY="371.400146484375" layoutX="260.0" layoutY="1479.0" startX="185.60003662109375" startY="432.199951171875" styleClass="routes" />
+            <Line fx:id="routeMeyzieuMcDoDecines" endX="502.39996337890625" endY="371.400146484375" layoutX="260.0" layoutY="1479.0" startX="835.199951171875" startY="553.800048828125" styleClass="routes" />
+            <Line fx:id="routeMcDoDecinesConfluence" endX="1199.60009765625" endY="623.800048828125" layoutX="270.0" layoutY="1489.0" startX="894.199951171875" startY="558.300048828125" styleClass="routes" />
+            <Line fx:id="routeMaconDigoin" endX="416.00006103515625" endY="-294.199951171875" layoutX="260.0" layoutY="1479.0" startX="556.8001098632812" startY="-57.39990234375" styleClass="routes" />
+            <Line fx:id="routeDigoinLaPalisse" endX="404.60003662109375" endY="-440.0" layoutX="270.0" layoutY="1489.0" startX="441.20001220703125" startY="-637.0" styleClass="routes" />
+            <Line fx:id="routeLaPalisseRoanne" endX="822.0" endY="-848.5999755859375" layoutX="280.0" layoutY="1499.0" startX="543.3999633789062" startY="-749.39990234375" styleClass="routes" />
+            <Line fx:id="routeRoanneCraponne" endX="878.800048828125" endY="-970.5999755859375" layoutX="290.0" layoutY="1509.0" startX="846.800048828125" startY="-1098.5999755859375" styleClass="routes" />
+            <Line fx:id="routeCraponneKfcSaintPriest" endX="1000.0" endY="-1339.0" layoutX="300.0" layoutY="1519.0" startX="881.60009765625" startY="-1220.5999755859375" styleClass="routes" />
+            <Line fx:id="routeSubwayVaulxCraponne" endX="622.0000610351562" endY="-1342.5999755859375" layoutX="310.0" layoutY="1529.0" startX="801.199951171875" startY="-1243.39990234375" styleClass="routes" />
+            <Line fx:id="routeMaconVilleurbanne" endX="921.199951171875" endY="-137.7999267578125" layoutX="270.0" layoutY="1489.0" startX="642.8001098632812" startY="-32.199951171875" styleClass="routes" />
+            <Line fx:id="routeMaconLesEchets" endX="1010.39990234375" endY="143.400146484375" layoutX="280.0" layoutY="1499.0" startX="626.3999633789062" startY="9.0" styleClass="routes" />
+            <Line fx:id="routeVilleurbanneLesEchets" endX="1054.800048828125" endY="59.800048828125" layoutX="290.0" layoutY="1509.0" startX="965.199951171875" startY="-132.199951171875" styleClass="routes" />
+            <Line fx:id="routeVilleurbanneLaserGameGenas" endX="1150.39990234375" endY="-404.5999755859375" layoutX="300.0" layoutY="1519.0" startX="955.199951171875" startY="-257.39990234375" styleClass="routes" />
+            <Line fx:id="routeLesEchetsFourviere" endX="1073.60009765625" endY="145.800048828125" layoutX="300.0" layoutY="1519.0" startX="1243.199951171875" startY="302.60009765625" styleClass="routes" />
+            <Line fx:id="routeLesEchetsConfluence" endX="1044.39990234375" endY="150.199951171875" layoutX="310.0" layoutY="1529.0" startX="1214.0" startY="513.400146484375" styleClass="routes" />
+            <Line fx:id="routeMcDoDecinesFourviere" endX="1211.071044921875" endY="321.800048828125" layoutX="320.0" layoutY="1539.0" startX="912.800048828125" startY="429.800048828125" styleClass="routes" />
+            <Line fx:id="routeFourviereMarie9e" endX="1312.39990234375" endY="269.400146484375" layoutX="330.0" layoutY="1549.0" startX="1530.0" startY="154.199951171875" styleClass="routes" />
+            <Line fx:id="routeConfluenceRillieux" endX="1219.199951171875" endY="547.400146484375" layoutX="340.0" layoutY="1559.0" startX="1734.39990234375" startY="374.60009765625" styleClass="routes" />
+            <Line fx:id="routeMarie9eRillieux" endX="1602.800048828125" endY="127.800048828125" layoutX="350.0" layoutY="1569.0" startX="1729.0" startY="311.800048828125" styleClass="routes" />
+            <Line fx:id="routeRillieuxBowlingBron" endX="2095.199951171875" endY="543.400146484375" layoutX="360.0" layoutY="1579.0" startX="1797.60009765625" startY="332.199951171875" styleClass="routes" />
+            <Line fx:id="routeRillieuxCaluire" endX="1822.800048828125" endY="-74.5999755859375" layoutX="370.0" layoutY="1589.0" startX="1784.39990234375" startY="239.0" styleClass="routes" />
+            <Line fx:id="routeMarie9eCaluire" endX="1777.0" endY="-110.199951171875" layoutX="380.0" layoutY="1599.0" startX="1550.39990234375" startY="8.2000732421875" styleClass="routes" />
+            <Line fx:id="routeCaluireEscapeGamePerrache" endX="1844.39990234375" endY="-139.39990234375" layoutX="390.0" layoutY="1609.0" startX="2148.39990234375" startY="-139.39990234375" styleClass="routes" />
+            <Line fx:id="routeEscapeGamePerracheWokVilleurbanne" endX="2503.2001953125" endY="-107.7999267578125" layoutX="400.0" layoutY="1619.0" startX="2224.800048828125" startY="-146.199951171875" styleClass="routes" />
+            <Line fx:id="routeWokVilleurbanneGenas" endX="2582.7998046875" endY="-124.199951171875" layoutX="410.0" layoutY="1629.0" startX="2813.2001953125" startY="-159.39990234375" styleClass="routes" />
+            <Line fx:id="routeRoanneBalbigny" endX="891.60009765625" endY="-881.0" layoutX="290.0" layoutY="1509.0" startX="1269.0" startY="-820.199951171875" styleClass="routes" />
+            <Line fx:id="routeBalbignyLarbresle" endX="1646.39990234375" endY="-564.5999755859375" layoutX="300.0" layoutY="1519.0" startX="1345.60009765625" startY="-799.800048828125" styleClass="routes" />
+            <Line fx:id="routeLarbresleCaluire" endX="1710.0" endY="-520.4000244140625" layoutX="310.0" layoutY="1529.0" startX="1879.60009765625" startY="-136.199951171875" styleClass="routes" />
+            <Line fx:id="routeLarbresleAndrezieux" endX="1687.199951171875" endY="-632.5999755859375" layoutX="320.0" layoutY="1539.0" startX="1789.60009765625" startY="-795.7999267578125" styleClass="routes" />
+            <Line fx:id="routeAndrezieuxSaintEtienne" endX="1888.39990234375" endY="-1039.39990234375" layoutX="330.0" layoutY="1549.0" startX="1802.0" startY="-911.39990234375" styleClass="routes" />
+            <Line fx:id="routeSaintEtienneVenissieux" endX="1948.800048828125" endY="-1084.5999755859375" layoutX="340.0" layoutY="1559.0" startX="2211.199951171875" startY="-1039.39990234375" styleClass="routes" />
+            <Line fx:id="routeVenissieuxParcDeLaTeteDOr" endX="2454.0" endY="-889.7999267578125" layoutX="350.0" layoutY="1569.0" startX="2281.199951171875" startY="-1046.5999755859375" styleClass="routes" />
+            <Line fx:id="routeVenissieuxCinemaBrignais" endX="2367.199951171875" endY="-1283.7999267578125" layoutX="360.0" layoutY="1579.0" startX="2242.39990234375" startY="-1127.0" styleClass="routes" />
+            <Line fx:id="routeCinemaBrignaisBurgerKingLimonest" endX="2440.39990234375" endY="-1309.7999267578125" fill="BLACK" layoutX="370.0" layoutY="1589.0" startX="2734.7998046875" startY="-1309.7999267578125" styleClass="routes" />
+            <MFXButton fx:id="boutonMagique" layoutX="741.0" layoutY="18.0" onAction="#issouCestMarrant" prefHeight="68.0" prefWidth="257.0" text="BOUTON MAGIQUE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </MFXButton>
+         </children>
+      </AnchorPane>
+   </content>
+</MFXScrollPane>

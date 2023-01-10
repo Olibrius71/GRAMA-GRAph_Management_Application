@@ -1,0 +1,187 @@
+.root {
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, reflect, #72767b 0.0%, #72767b 26.9179%, #00ff62 49.42%, #72767a 59.8067%, #00ff62 67.3171%, #72767b 82.3215%, #ffffff 100.0%)
+    /*linear-gradient(from 57.5758% 0.0% to 100.0% 95.0758%, reflect, #2400ff 0.0%, #00ff15 24.878%, #000000 40.2528%, #ff0000 54.1893%, #000000 75.8537%, #ffffff 100.0%);*/
+}
+
+/*    -fx-background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMArkDtDBsV7chcoxZTsDBr9xUkWH4hd7wpg&usqp=CAU");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+*/
+
+
+
+.comboBox {
+    -fx-font-size: 20;
+    -fx-text-inner-color: white;
+    -fx-background-color: black;
+}
+/*
+.comboBox .cell {
+    -fx-border: 10;
+}
+.comboBox .menu-item:focused .label{
+    -fx-text-fill: lime;
+}
+*/
+
+
+.results {
+    -fx-font-size: 25;
+    -fx-text-fill: black;
+    -fx-font-family: "Sitka Display";
+}
+
+#quitButton {
+    -fx-background-color: linear-gradient(to bottom left, cyan, green);
+}
+#quitButton:hover {
+    -fx-background-color: linear-gradient(to bottom left, orangered, deeppink);
+}
+
+
+#iconCity {
+    -fx-background-color: green;
+}
+
+#backButton {
+    -fx-background-color: #121212;
+    -fx-text-fill: #EDEDED;
+}
+#backButton:hover {
+    -fx-background-color: mediumblue;
+}
+
+
+#result .ikonli-font-icon {
+    -fx-icon-code: "mdal-home_work";
+    -fx-icon-color: white;
+}
+
+/*
+#boutonNouveau {
+    -fx-background-color: linear-gradient(from 58.3333% 0.0% to 66.2879% 100.0%, #001eff 0.0%, #ff0000 0.6729%, #001eff 22.2821%, #1100ff 53.1707%, #ff1e00 90.7685%, #0022ff 91.9627%, #0022ff 100.0%);
+}
+
+#boutonNouveau2{
+    -fx-background-color: radial-gradient(focus-angle 157.2deg, focus-distance -89.9083% , center 50.0% 50.0%, radius 100.0%, reflect, #001eff 0.0%, #ff0000 0.6729%, #001eff 22.2821%, #1100ff 53.1707%, #ff1e00 90.7685%, #0022ff 94.3853%, #0022ff 100.0%);
+}
+*/
+
+#boutonNouveau{
+    -fx-background-color: radial-gradient(focus-angle 156.61deg, focus-distance -100.0% , center 50.0% 50.0%, radius 100.0%, #000000 0.0%, #000000 59.2243%, #00ff09 86.007%, #00ff09 100.0%);
+}
+
+
+
+/* Styling de la Splitpane */
+/*                         */
+
+#splitPane {
+    -fx-background-color: antiquewhite;
+    /*
+    -fx-background-image: url("https://media.istockphoto.com/videos/4k-abstract-particles-background-animation-loopable-video-id802751622?s=640x640");
+    -fx-background-size: cover;
+    */
+}
+
+
+#splitPane .split-pane-divider {
+    -fx-background-color: grey;
+}
+
+
+/*                               */
+/* Fin du Styling de la Splitpane*/
+
+
+.resultContainers {
+    -fx-background-color: antiquewhite;
+}
+
+#splitPaneRight {
+
+}
+
+
+/* Styling de la TabPane */
+/*                       */
+
+#tabPane {
+    -fx-background-color: #888888;
+}
+
+#tabPane .tab {
+    -fx-background-color: yellow;
+    -fx-border-insets: 10;
+    -fx-spacing: 20;
+}
+
+#tabPane .tab:selected {
+    -fx-background-color: orange;
+}
+
+#tabPane .tab-header-area .tab-header-background {
+    -fx-background-color: red;
+}
+
+/*                              */
+/* Fin du Styling de la TabPane */
+
+
+
+
+
+
+.tooltips {
+    -fx-text-fill: lime;
+    -fx-background-color: #222222;
+}
+
+.descComboBoxes {
+    -fx-text-fill: orange;
+    -fx-font-size: 21;
+    -fx-background-color: #2A2F73;
+}
+
+
+.resultLists {
+    -fx-font: 15 "Myanmar Text";
+}
+
+.resultLists .list-cell {
+    -fx-background-insets: 1;
+    -fx-background-color: #1A2F73;
+    -fx-text-fill: lime;
+    -fx-font-size: 18;
+}
+
+.resultLists .list-cell:hover {
+    -fx-background-color: lime;
+    -fx-text-fill: aquamarine;
+}
+
+
+.resultLists .list-cell .jfx-rippler {
+    -fx-rippler-fill: ORANGE;
+}
+
+
+.connaitreSesVoisinsClass {
+    -fx-background-color: linear-gradient(from 67.4242% 0.0% to 68.5606% 100.0%, reflect, #fff41a 0.0%, #fff41a 0.6729%, #ff0000 35.8008%, #ff1c1c 54.9716%, #ff0000 67.9677%, #f2ff1c 96.18%, #f2ff1c 100.0%);
+}
+
+
+.mfx-radio-button {
+    -fx-font-size: 24;
+    -fx-text-fill: white;
+}
+
+#distChoiceContainer {
+    -fx-background-color: black;
+    -fx-border-color: lime;
+    -fx-border-width: 4;
+    -fx-border-style: dashed;
+    -fx-stroke-width: 6;
+}

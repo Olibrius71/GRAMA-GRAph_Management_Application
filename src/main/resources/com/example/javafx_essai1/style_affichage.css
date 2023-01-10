@@ -1,0 +1,43 @@
+.root {
+    -fx-background-color: green;
+}
+
+#quitButton {
+    -fx-background-color: linear-gradient(to bottom left, cyan, green);
+}
+#quitButton:hover {
+    -fx-background-color: linear-gradient(to bottom left, orangered, deeppink);
+}
+
+#backButton {
+    -fx-background-color: #121212;
+    -fx-text-fill: #EDEDED;
+}
+#backButton:hover {
+    -fx-background-color: mediumblue;
+}
+
+#boutonMagique {
+    -fx-background-color: linear-gradient(to bottom left, lime, green);
+}
+#boutonMagique:hover {
+    -fx-background-color: linear-gradient(to bottom left, yellow, orangered);
+}
+
+
+
+.endroitName {
+    -fx-font-size: 31;
+    -fx-text-fill: black;
+}
+
+.endroitIcon {
+    -fx-icon-size: 59;
+}
+
+
+.routes {
+    -fx-stroke-width: 10;
+}
+
+.
